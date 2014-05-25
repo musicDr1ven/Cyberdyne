@@ -1,0 +1,12 @@
+{
+    "port": "26000"
+  , "restful": {
+        "strict": true
+      , "explore": true
+      , "prefix": "api"
+    }
+  , "resourceful": {
+        "engine": "mongodb"
+      , "uri": "mongodb://localhost:27017/vishnu"
+    }
+}
