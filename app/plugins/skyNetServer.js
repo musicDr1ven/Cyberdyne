@@ -6,14 +6,14 @@ var flatiron = require('flatiron');
 var node = {};
 exports.name = 'skyNetServer';
 
-exports.init = function (done) {
+exports.connectToPeers = function (knownSeeds, done) {
     
      node = smoke.createNode({
       port: parseInt(process.argv[2]) || 14
     , address: smoke.localIp('192.168.2.1/255.255.255.0')
-    , seeds: [{port: 7777, address:'localhost'},{port: 8000, address:'localhost'}] 
+    , seeds: [knownSeeds] 
     })
-    
+    //{port: 7777, address:'localhost'},{port: 8000, address:'localhost'}
     console.log('Port', node.options.port)
     console.log('IP', node.options.address)
     console.log('ID', node.id)

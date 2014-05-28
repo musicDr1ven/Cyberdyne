@@ -17,11 +17,22 @@
  *   })
  * })
  */
-var resourceful = require('resourceful')
-  , crypto = require('crypto')
+var  crypto = require('crypto')
   , utils = require('../utils')
 
+
+var resourceful = require('resourceful-mongo');
+
 module.exports = resourceful.define('user', function () {
+    
+    
+   this.use('mongodb', {
+      database: "mongodb://localhost/vishnu", // required - the mongo URI of the database
+      collection: "user", // required - the name of the collection
+      safe: true // optional - run the driver in safe mode to ensure that the update succeeded. Defaults to false
+    });
+    
+    
   this.restful = true
   this.remote = true
 

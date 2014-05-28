@@ -44,7 +44,7 @@ exports.attach = function (options) {
 
     files.forEach(function (file) {
       file = file.replace('.js', '')
-      delete app.controllers[common.capitalize(file)]
+     // delete app.controllers[common.capitalize(file)]
       app.controllers[common.capitalize(file)] = require(
         path.resolve(app._controllerDir, file)
       )
@@ -61,6 +61,7 @@ exports.init = function (done) {
   // Attempt to merge defaults passed to `app.use(flatiron.plugins.controllers)`
   // with any additional configuration that may have been loaded.
   //
+//   console.log("here is testme from controllers:" +  app.cmd.testMe());
   options = common.mixin(
       {}
     , app.options['controllers']

@@ -1,5 +1,5 @@
 var net  = require('net')
-  , Node = require('./lib/node')
+  , Node = require('../../lib/node')
   , Netmask = require('netmask').Netmask
   , os = require('os')
 

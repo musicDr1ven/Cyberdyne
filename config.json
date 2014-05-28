@@ -1,5 +1,5 @@
 {
-    "port": "26000"
+    "port": "26002"
   , "restful": {
         "strict": true
       , "explore": true
@@ -7,6 +7,6 @@
     }
   , "resourceful": {
         "engine": "mongodb"
-      , "uri": "mongodb://localhost:27017/vishnu"
+      , "uri": "mongodb://localhost/vishnu"
     }
 }
